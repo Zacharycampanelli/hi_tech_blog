@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// GET /api/users/1
+// GET /api/users/i
 router.get('/:id', (req, res) => {
   User.findOne({
     // attributes: { exclude: ['password'] },
@@ -71,7 +71,7 @@ router.post('/login', (req, res) => {
   });
 });
 
-// PUT /api/users/1
+// PUT /api/users/i
 router.put('/:id', (req, res) => {
   User.update(req.body, {
     individualHooks: true,
@@ -92,7 +92,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
-// DELETE /api/users/1
+// DELETE /api/users/i
 router.delete('/:id', (req, res) => {
   User.destroy({
     where: {
