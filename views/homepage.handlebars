@@ -1,0 +1,15 @@
+<ol class = "post-list">
+    <li>
+        <article class="post">
+            <div class="title">
+                <a href="/post/{{id}}" target="_blank">{{title}}</a>
+                <span>{{post_text}}</span>
+            </div>
+            <div class="meta">
+                {{vote_count}} like(s) by {{user.username}} on {{created_at}}
+                |
+                <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+            </div>
+        </article>
+    </li>
+</ol>
