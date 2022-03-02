@@ -47,7 +47,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-//GET api/posts/i
+//GET api/posts/edit/i
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
