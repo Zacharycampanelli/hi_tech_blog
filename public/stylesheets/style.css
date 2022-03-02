@@ -1,3 +1,8 @@
+:root {
+  --dark-blue: rgba(100, 200, 255, 0.8);
+  --light-blue: rgba(100, 200, 255, 0.3);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,6 +14,7 @@ body, html {
   font-family: sans-serif;
   color: #333;
 }
+
 
 a {
   text-decoration: none;
@@ -36,6 +42,10 @@ button:hover {
   background-color: #3486eb;
 }
 
+.title {
+  font-size: 1.2em;
+}
+
 .post-list {
   margin: 0;
   padding: 0;
@@ -57,6 +67,10 @@ textarea {
   min-height: 100px;
 }
 
+form {
+  padding-left: 2em;
+}
+
 form > div {
   margin-bottom: 2%;
 }
@@ -75,20 +89,53 @@ form label {
 }
 
 header {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
 }
 
-header h1 {
-  font-size: 1em;
+h1 {
+  font-size: 2em;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+h2 {
+  margin-left: 0.5em;
 }
 
 main {
   flex: 1;
-  padding: 2% 4%;
+  padding: 0;
+  background-color: var(--light-blue);
+}
+
+nav {
+  margin-right: 1em; 
+  align-self: flex-end;
+}
+
+header{
+  padding: 1em;
+}
+
+li:nth-child(odd) {
+  background-color: var(--light-blue);
+
+}
+
+li:nth-child(even) {
+  background-color: var(--dark-blue);
+
+}
+
+li { 
+  padding: 0.8em 0.5em;
+}
+
+.btn {
+  background-color: var(--dark-blue);
 }
 
 .btn-no-style {
@@ -118,7 +165,8 @@ main {
 }
 
 .post {
-  margin-bottom: 2%;
+  padding-bottom: 2%;
+  margin-left: 0.5em;
   line-height: 150%;
 }
 
@@ -148,11 +196,21 @@ main {
 
 .comment {
   padding: 1%;
-  margin-bottom: 1%;
+  
 }
 
 .comment:nth-child(odd) {
   background-color: #fff5eb;
+}
+
+.comment:nth-child(odd) {
+  background-color: var(--light-blue);
+
+}
+
+.comment:nth-child(even) {
+  background-color: var(--dark-blue);
+
 }
 
 .comment .meta {
