@@ -82,7 +82,6 @@ form label {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -102,6 +101,7 @@ h1 {
 }
 
 h2 {
+  padding-top: 0.5em;
   margin-left: 0.5em;
 }
 
