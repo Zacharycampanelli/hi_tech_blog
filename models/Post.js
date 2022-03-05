@@ -42,11 +42,7 @@ Post.init(
             allowNull: false
         },
         post_text: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-            validate: {
-              len: [4]
-            }
+            type: DataTypes.STRING,
         },
         user_id: {
             type: DataTypes.INTEGER,

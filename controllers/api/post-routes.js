@@ -38,7 +38,7 @@ router.get('/', (req, res) => {
     });
 });
 
-//GET api/posts/i
+//GET api/posts/id
 router.get('/:id', (req, res) => {
   Post.findOne({
     where: {
@@ -98,7 +98,7 @@ router.post('/', withAuth, (req, res) => {
 
 // PUT /api/posts/upvote
 router.put('/upvote', withAuth, (req, res) => {
-  // static method in models/Post.js
+g
   if (req.session) {
       Post.upvote({...req.body, user_id: req.session.user_id}, { Vote, Comment, User})
       .then(updatedPostData => res.json(updatedPostData))
@@ -109,11 +109,12 @@ router.put('/upvote', withAuth, (req, res) => {
 }
 });
 
-// PUT /api/posts/i
+// PUT /api/posts/id
 router.put('/:id', withAuth,(req, res) => {
   Post.update(
     {
       title: req.body.title,
+      post_text: req.body.post_text
     },
     {
       where: {
@@ -134,7 +135,7 @@ router.put('/:id', withAuth,(req, res) => {
     });
 });
 
-// DELETE /api/posts/i
+// DELETE /api/posts/id
 router.delete('/:id', withAuth, (req, res) => {
   Post.destroy({
     where: {
