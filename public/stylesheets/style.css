@@ -116,6 +116,10 @@ nav {
   align-self: flex-end;
 }
 
+nav > a {
+  margin-left: 1em;
+}
+
 header{
   padding: 1em;
 }
