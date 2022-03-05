@@ -1,3 +1,5 @@
+-- Database creation
+
 -- Drop database if exists
 DROP DATABASE IF EXISTS hi_tech_blog_db;
 

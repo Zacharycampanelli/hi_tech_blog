@@ -4,6 +4,7 @@ const seedComments = require('./comment-seeds');
 
 const sequelize = require('../config/connection');
 
+// Function that seeds the entire application
 const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log('\n----- DATABASE HAS BEEN SYNCED -----\n');
