@@ -1,7 +1,7 @@
 {
   "name": "hi_tech_blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "![license badge](https://img.shields.io/badge/license-mit-green)",
   "main": "server.js",
   "scripts": {
     "test": "jest",
